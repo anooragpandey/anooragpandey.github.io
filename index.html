@@ -122,33 +122,11 @@
       <span class="credit-sep">/</span>
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anoorag.pandey@gmail.com" target="_blank" rel="noreferrer">Email</a>
     </div>
-  </footer>
-  <audio id="theme" src="Also%20sprach%20Zarathustra.mp3" preload="auto"></audio>
-  <script>
-    async function startTheme() {
-      const audio = document.getElementById('theme');
-      try {
-        if (audio.readyState < 1) {
-          await new Promise((resolve) => {
-            audio.addEventListener('loadedmetadata', resolve, { once: true });
-            audio.load();
-          });
-        }
-        audio.currentTime = 16;
-        audio.volume = 0.01;
-        audio.loop = true;
-        await audio.play();
-      } catch (error) {
-        console.error('Theme playback failed:', error);
-      }
-    }
-
-    document.addEventListener('pointerdown', startTheme, { once: true });
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/motion@12.23.24/dist/motion.js"></script>
+  </footer>`r`n  <script src="https://cdn.jsdelivr.net/npm/motion@12.23.24/dist/motion.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
