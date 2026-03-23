@@ -104,11 +104,13 @@ body {
   height: clamp(420px, 60vh, 700px);
   position: relative;
   overflow: hidden;
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.004) 3%, #000 9%, #000 92%, rgba(255, 255, 255, 0.018) 100%);
+  background: #000;
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.08),
-    0 0 28px rgba(255, 255, 255, 0.018);
+    inset 1px 0 0 rgba(255, 255, 255, 0.08),
+    inset -1px 0 0 rgba(255, 255, 255, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
 .inner-monkey {
@@ -226,56 +228,17 @@ body {
   }
 
   .monolith {
-    width: clamp(126px, 18vw, 170px);
-    height: min(42vh, 430px);
-  }
-
-  .inner-monkey {
-    width: 54%;
-    left: 15%;
-    top: 16%;
-  }
-
-  .footer {
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 2.2rem);
-    width: min(94vw, 420px);
-    gap: 0.35rem;
-  }
-
-  .footer::before {
-    content: "";
-    position: absolute;
-    inset: -0.85rem -0.6rem -0.75rem;
-    z-index: -1;
-    background:
-      linear-gradient(180deg, rgba(255, 240, 204, 0) 0%, rgba(255, 236, 196, 0.2) 24%, rgba(255, 233, 187, 0.46) 64%, rgba(255, 228, 171, 0.7) 100%);
-    filter: blur(14px);
-    border-radius: 22px;
-  }
-
-  .poster-title {
-    font-size: clamp(1.28rem, 5.9vw, 2rem);
-    line-height: 1.02;
-    max-width: 320px;
-    text-shadow:
-      0 1px 0 rgba(255, 248, 232, 0.28),
-      0 0 10px rgba(255, 240, 210, 0.2);
-  }
-
-  .poster-credits {
-    font-size: 0.76rem;
-    line-height: 1.45;
-    letter-spacing: 0.04em;
-    gap: 0.12rem 0.3rem;
-    max-width: 340px;
-    text-align: center;
-    text-shadow: 0 1px 0 rgba(255, 248, 232, 0.2);
-  }
-
-  .poster-credits a,
-  .credit-sep {
-    color: #20160a;
-  }
+  width: clamp(170px, 15vw, 215px);
+  height: clamp(420px, 60vh, 700px);
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    inset 1px 0 0 rgba(255, 255, 255, 0.08),
+    inset -1px 0 0 rgba(255, 255, 255, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
 @media (min-width: 761px) and (max-width: 1100px) {
@@ -289,18 +252,17 @@ body {
   }
 
   .monolith {
-    width: clamp(150px, 18vw, 196px);
-    height: clamp(400px, 56vh, 620px);
-  }
-
-  .poster-title {
-    font-size: clamp(1.3rem, 3vw, 2.1rem);
-  }
-
-  .poster-credits {
-    font-size: 0.74rem;
-    letter-spacing: 0.08em;
-  }
+  width: clamp(170px, 15vw, 215px);
+  height: clamp(420px, 60vh, 700px);
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    inset 1px 0 0 rgba(255, 255, 255, 0.08),
+    inset -1px 0 0 rgba(255, 255, 255, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -310,3 +272,9 @@ body {
     transition-duration: 1ms !important;
   }
 }
+
+
+
+
+
+

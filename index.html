@@ -116,12 +116,32 @@
       <span class="credit-sep">/</span>
       <a href="https://www.linkedin.com/in/anooragpandey" target="_blank" rel="noreferrer">LinkedIn</a>
       <span class="credit-sep">/</span>
+      <a href="https://www.youtube.com/@anooragpandey" target="_blank" rel="noreferrer">YouTube</a>
+      <span class="credit-sep">/</span>
       <a href="https://github.com/anooragpandey" target="_blank" rel="noreferrer">GitHub</a>
       <span class="credit-sep">/</span>
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anoorag.pandey@gmail.com" target="_blank" rel="noreferrer">Email</a>
     </div>
   </footer>
+  <audio id="theme" src="theme.mp3" preload="auto"></audio>
+  <script>
+    document.addEventListener('click', async function () {
+      const audio = document.getElementById('theme');
+      try {
+        audio.currentTime = 16;
+        audio.volume = 1;
+        audio.loop = true;
+        await audio.play();
+      } catch (error) {
+        console.error('Theme playback failed:', error);
+      }
+    }, { once: true });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/motion@12.23.24/dist/motion.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
