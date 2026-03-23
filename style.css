@@ -1,0 +1,269 @@
+:root {
+  --paper: #f6f0e4;
+  --paper-soft: rgba(246, 240, 228, 0.74);
+  --line: rgba(255, 255, 255, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--paper);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 223, 98, 0.22), rgba(126, 71, 0, 0.1) 38%, #050200 70%, #000000 100%);
+}
+
+.space {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 46%, rgba(255, 210, 72, 0.34), rgba(255, 157, 0, 0.16) 28%, rgba(49, 19, 0, 0.08) 46%, rgba(0, 0, 0, 0) 72%);
+}
+
+.solar-flare {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(34px);
+}
+
+.solar-flare-a {
+  inset: 8% 18%;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 226, 120, 0.58), rgba(255, 170, 22, 0.22) 36%, rgba(0, 0, 0, 0) 70%);
+}
+
+.solar-flare-b {
+  left: -12%;
+  top: 22%;
+  width: 48%;
+  height: 48%;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 232, 148, 0.3), rgba(255, 153, 0, 0.12) 44%, rgba(0, 0, 0, 0) 72%);
+}
+
+.solar-flare-c {
+  right: -10%;
+  bottom: 18%;
+  width: 46%;
+  height: 46%;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 214, 102, 0.26), rgba(255, 145, 0, 0.11) 42%, rgba(0, 0, 0, 0) 74%);
+}
+
+.stage {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  padding: 2rem 2rem 8rem;
+}
+
+.scene {
+  position: relative;
+  width: min(92vw, 1100px);
+  height: min(82vh, 900px);
+  background: transparent;
+}
+
+.monolith-wrap {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -52%);
+}
+
+.monolith {
+  width: clamp(170px, 15vw, 215px);
+  height: clamp(470px, 68vh, 760px);
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.004) 3%, #000 9%, #000 92%, rgba(255, 255, 255, 0.018) 100%);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 0 28px rgba(255, 255, 255, 0.018);
+}
+
+.inner-monkey {
+  position: absolute;
+  left: 20%;
+  top: 18%;
+  width: 40%;
+  aspect-ratio: 220 / 260;
+  opacity: 0.92;
+  animation: drift-inside 18s linear infinite alternate;
+}
+
+.monkey-art {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  transform: rotate(10deg);
+  filter:
+    saturate(0.62)
+    contrast(0.92)
+    brightness(0.86)
+    drop-shadow(0 8px 10px rgba(0, 0, 0, 0.16));
+}
+
+.monkey-art .arm-left {
+  transform-origin: 70px 150px;
+  animation: arm-left 2.6s ease-in-out infinite alternate;
+}
+
+.monkey-art .arm-right {
+  transform-origin: 150px 148px;
+  animation: arm-right 2.6s ease-in-out infinite alternate;
+}
+
+.monkey-art .leg-left {
+  transform-origin: 88px 208px;
+  animation: leg-left 3s ease-in-out infinite alternate;
+}
+
+.monkey-art .leg-right {
+  transform-origin: 132px 208px;
+  animation: leg-right 3s ease-in-out infinite alternate;
+}
+
+.footer {
+  position: fixed;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: min(96vw, 1100px);
+  display: grid;
+  gap: 0.2rem;
+  justify-items: center;
+}
+
+.poster-title {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: clamp(1.7rem, 3.8vw, 3rem);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  color: #000;
+  max-width: min(92vw, 980px);
+}
+
+.poster-credits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.22rem 0.45rem;
+  max-width: min(94vw, 980px);
+  margin-top: 0.3rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.poster-credits a,
+.credit-sep {
+  color: rgba(0, 0, 0, 0.72);
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.poster-credits a:hover,
+.poster-credits a:focus-visible {
+  color: #000;
+}
+
+.poster-credits a:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.25);
+  outline-offset: 3px;
+}
+
+@keyframes drift-inside {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(92%, 0);
+  }
+  40% {
+    transform: translate(92%, 126%);
+  }
+  60% {
+    transform: translate(0, 126%);
+  }
+  80% {
+    transform: translate(0, 24%);
+  }
+  100% {
+    transform: translate(78%, 58%);
+  }
+}
+
+@keyframes arm-left {
+  from { transform: rotate(10deg); }
+  to { transform: rotate(-8deg); }
+}
+
+@keyframes arm-right {
+  from { transform: rotate(-6deg); }
+  to { transform: rotate(10deg); }
+}
+
+@keyframes leg-left {
+  from { transform: rotate(6deg); }
+  to { transform: rotate(-5deg); }
+}
+
+@keyframes leg-right {
+  from { transform: rotate(-6deg); }
+  to { transform: rotate(6deg); }
+}
+
+@media (max-width: 760px) {
+  .stage {
+    padding: 1rem 1rem 9.5rem;
+  }
+
+  .monolith {
+    width: clamp(132px, 18vw, 176px);
+    height: min(56vh, 560px);
+  }
+
+  .inner-monkey {
+    width: 46%;
+  }
+
+  .poster-title {
+    font-size: clamp(1.2rem, 5.4vw, 2rem);
+  }
+
+  .poster-credits {
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}
