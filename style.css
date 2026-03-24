@@ -257,21 +257,11 @@ body {
 }
 
 .socials-list {
-  width: 100%;
+  width: min(100%, 34rem);
   display: block;
   line-height: 1.35;
   text-align: center;
-}
-
-.socials-row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0 0;
-}
-
-.socials-row-secondary {
-  margin-top: 0.05rem;
+  margin: 0 auto;
 }
 
 .socials-list a,
@@ -393,6 +383,8 @@ body {
   .socials-list {
     display: block;
     text-align: center;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .socials-row {
@@ -438,6 +430,7 @@ body {
     transition-duration: 1ms !important;
   }
 }
+
 
 
 
