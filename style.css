@@ -286,9 +286,10 @@ body {
 }
 
 .back-link {
-  justify-self: start;
+  justify-self: center;
   display: inline-block;
-  margin-top: 0.15rem;
+  margin-top: 0.45rem;
+  font-weight: 700;
 }
 
 
@@ -370,7 +371,7 @@ body {
   .socials-shell {
     width: min(92vw, 420px);
     gap: 0.9rem;
-    justify-items: start;
+    justify-items: center;
   }
 
   .socials-title {
@@ -379,7 +380,7 @@ body {
 
   .socials-list {
     display: block;
-    text-align: left;
+    text-align: center;
   }
 
   .socials-list a,
@@ -421,5 +422,6 @@ body {
     transition-duration: 1ms !important;
   }
 }
+
 
 
