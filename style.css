@@ -260,6 +260,18 @@ body {
   width: 100%;
   display: block;
   line-height: 1.35;
+  text-align: center;
+}
+
+.socials-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 0;
+}
+
+.socials-row-secondary {
+  margin-top: 0.05rem;
 }
 
 .socials-list a,
@@ -383,6 +395,10 @@ body {
     text-align: center;
   }
 
+  .socials-row {
+    justify-content: center;
+  }
+
   .socials-list a,
   .back-link {
     font-size: 0.98rem;
@@ -422,6 +438,8 @@ body {
     transition-duration: 1ms !important;
   }
 }
+
+
 
 
 
